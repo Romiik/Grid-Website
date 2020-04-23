@@ -1,0 +1,419 @@
+/*1                       BASE                            */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --primary-color: #c72727;
+  --secondary-color: #f99500;
+  --light-color: #f3f3f3;
+  --dark-color: #333;
+  --max-width: 110rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 2.5rem;
+  background: var(--light-color);
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+p {
+  margin: 1.2rem 0;
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 1.872rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 1.6rem;
+}
+
+label {
+  font-size: 1.6rem;
+}
+
+img {
+  width: 100%;
+}
+
+/*1                       BASE                            */
+
+/*2                      UTILTY                           */
+
+.category {
+  --sports-color: #f99500;
+  --ent-color: #a66bbe;
+  --tech-color: #009cff;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 3.2rem;
+  overflow: hidden;
+}
+
+.category {
+  display: inline-block;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 0.5rem 0.8rem;
+  border-radius: 1.5rem;
+  margin-bottom: 1.7rem;
+}
+
+.category-sports {
+  background: var(--sports-color);
+}
+
+.category-ent {
+  background: var(--ent-color);
+}
+
+.category-tech {
+  background: var(--tech-color);
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: var(--dark-color);
+  color: aliceblue;
+  transition: all 0.3s ease-in-out;
+  padding: 1rem 2rem;
+}
+
+.btn-light {
+  background: var(--light-color);
+  color: #333;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+  color: #333;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.card {
+  background: #fff;
+  padding: 1.5rem;
+}
+
+.bg-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.bg-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.bg-secondary {
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+.bg-dark h1,
+h2,
+h3,
+a {
+  color: aliceblue;
+}
+
+.bg-primary h1,
+h2,
+h3,
+a {
+  color: aliceblue;
+}
+
+.bg-secondary h1,
+h2,
+h3,
+a {
+  color: var(--dark-color);
+}
+
+.py-1 {
+  padding: 2.8rem 0;
+}
+
+.py-2 {
+  padding: 4rem 0;
+}
+
+.py-3 {
+  padding: 6rem 0;
+}
+
+.p1 {
+  padding: 2.8rem;
+}
+
+.p2 {
+  padding: 4rem;
+}
+
+.p3 {
+  padding: 6rem;
+}
+
+.l-heading {
+  font-size: 3.5rem;
+}
+
+.list li {
+  padding: 0.6rem 0;
+  border-bottom: #555 dotted 0.1rem;
+  width: 90%;
+}
+
+.list li a {
+  color: #fff;
+}
+
+.list li a:hover {
+  color: var(--primary-color) !important;
+}
+
+.page-container {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  margin: 2.5rem 0;
+  grid-gap: 1.5rem;
+}
+
+.page-container > *:first-child {
+  grid-row: 1 / span 3;
+}
+
+/*2                                                       */
+
+/*3                       COMPONENTS                      */
+
+/*4  Navbar  */
+
+#main-nav {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#main-nav .container {
+  display: grid;
+  grid-template-columns: 6fr 3fr 2fr;
+  padding: 1rem;
+  align-items: center;
+}
+
+#main-nav .logo {
+  width: 18rem;
+}
+
+#main-nav ul {
+  justify-self: end;
+  display: flex;
+}
+
+#main-nav ul li a {
+  padding: 1.3rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  color: #333;
+  margin: 0 0.5rem;
+}
+
+#main-nav ul li a.current {
+  background: var(--primary-color);
+  border-radius: 1rem;
+  color: aliceblue;
+}
+
+#main-nav ul li a.current:hover {
+  background: #373737;
+  border-radius: 1rem;
+  color: aliceblue;
+}
+
+#main-nav ul li a:hover {
+  background: var(--light-color);
+  border-radius: 1rem;
+}
+
+#main-nav .social {
+  justify-self: center;
+}
+
+#main-nav .social i {
+  color: #777;
+  margin-right: 0.8rem;
+}
+
+/*4 Showcase */
+
+#showcase {
+  color: #fff;
+  background: #333;
+  padding: 3rem;
+  position: relative;
+}
+
+#showcase:before {
+  content: "";
+  background: url("../assets/featured.jpg") no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+#showcase .showcase-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+#showcase .showcase-content {
+  z-index: 1;
+}
+
+#showcase .showcase-content p {
+  margin-bottom: 2rem;
+}
+
+/*4 Home Article  */
+
+#home-articles .articles-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+#home-articles .articles-container > *:first-child {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  align-items: center;
+  grid-column: 1 / span 2;
+}
+
+#home-articles .articles-container > *:last-child {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  align-items: center;
+  grid-column: 2 / span 2;
+}
+
+/*4 Main Footer */
+
+#main-footer {
+  background: var(--dark-color);
+  color: aliceblue;
+}
+
+#main-footer img {
+  width: 15rem;
+}
+#main-footer .footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+  justify-content: center;
+  text-align: center;
+}
+
+#main-footer .footer-container > *:last-child {
+  background: #444;
+  grid-column: 1 / span 4;
+  padding: 0.7rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+#main-footer .footer-container input[type="email"] {
+  width: 90%;
+  padding: 0.7rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+#main-footer .footer-container input[type="submit"] {
+  width: 90%;
+  margin-bottom: 5rem;
+}
+
+/*4 Article page */
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eee;
+  padding: 0.5rem;
+}
+
+.meta .category {
+  margin-top: 0.7rem;
+}
